@@ -1,37 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## CPNT-262-NextJs-Pokemon-Lab
 
-## Getting Started
+### Bugs which are fixed
 
-First, run the development server:
+1. The links in layout.js are missing the href attribute.
+   Fix: Update the navigation to correctly use the Next.js  Link component by adding the appropriate href attribute.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Incorrect API URL: The Pokémon list was failing due to an incorrect API URL.
+   Infinite Loop in useEffect: The useEffect dependency was causing an infinite loop.
+   Missing Error Handling: There was no error handling for failed API requests.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Update the href to use Next.js dynamic routing syntax as /pokemon/[id] instead of pokemon?id=1.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+4. Add a navigation link to the Home page using the Next.js Link component on the About page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Update the Pokémon link to use template literals with the id, add error handling for invalid IDs, and use the    correct property for Pokémon images.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### What you learned during the debugging process.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Small issues, like incorrect parameters or missing error handling, can significantly affect functionality.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Proper error handling is crucial for building resilient applications that can gracefully handle unexpected situations.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# cpnt-262-nextjs-pokemon-lab
+-  Ensuring that the correct data properties are accessed and used correctly is essential for maintaining accurate output and user experience.
